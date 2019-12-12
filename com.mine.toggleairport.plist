@@ -12,6 +12,9 @@
   </array>
   <key>WatchPaths</key>
   <array>
+    <string>/private/var/run/resolv.conf</string>
+    <string>/Library/Preferences/SystemConfiguration/NetworkInterfaces.plist</string>
+    <string>/Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist</string>
   </array>
 </dict>
 </plist>

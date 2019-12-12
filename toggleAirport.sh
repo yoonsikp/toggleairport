@@ -1,6 +1,20 @@
 #!/bin/bash
 #git@github.com:paulbhart/toggleairport.git
 #originally from https://gist.github.com/albertbori/1798d88a93175b9da00b
+
+# rate limiting, run at most every second
+if [ -f "/var/tmp/prev_toggle_airport_run" ]; then
+    prev_toggle_airport_run=`cat /var/tmp/prev_toggle_airport_run`
+    prev_toggle_airport_run_po=$(($prev_toggle_airport_run + 1))
+    current=`date +%s`
+
+    if (( $prev_toggle_airport_run_po > $current )); then
+        exit 0
+    fi
+fi
+
+date +%s > /var/tmp/prev_toggle_airport_run
+
 function set_airport {
 
     new_status=$1

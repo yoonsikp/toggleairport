@@ -1,5 +1,7 @@
 All the credit for the code belongs to others including https://gist.github.com/albertbori/1798d88a93175b9da00b
 
+Tested on Catalina
+
 Assuming you have git all ready configured for GitHub, then simply do the following
 
 ```bash
@@ -13,4 +15,4 @@ to uninstall just do
 ./uninstall.sh
 ```
 
-do not run either of the scripts with sudo, if you do, notifications will not display.
+Do not run either of the scripts with sudo, if you do, notifications will not display.

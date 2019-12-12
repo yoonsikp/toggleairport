@@ -50,7 +50,7 @@ if [ -f "/var/tmp/prev_eth_on" ]; then
     prev_eth_status="On"
 fi
 
-# Determine same for AirPort status
+# Determine same for Wi-Fi status
 # File is prev_air_on
 if [ -f "/var/tmp/prev_air_on" ]; then
     prev_air_status="On"
@@ -63,15 +63,8 @@ for eth_name in ${eth_names}; do
     fi
 done
 
-# And actual current AirPort status
+# And actual current Wi-Fi status
 air_status=`/usr/sbin/networksetup -getairportpower $air_name | awk '{ print $4 }'`
-
-# If any change has occured. Run external script (if it exists)
-if [ "$prev_air_status" != "$air_status" ] || [ "$prev_eth_status" != "$eth_status" ]; then
-    if [ -f "./statusChanged.sh" ]; then
-        "./statusChanged.sh" "$eth_status" "$air_status" &
-    fi
-fi
 
 # Determine whether ethernet status changed
 if [ "$prev_eth_status" != "$eth_status" ]; then
@@ -87,10 +80,10 @@ if [ "$prev_eth_status" != "$eth_status" ]; then
 # If ethernet did not change
 else
 
-    # Check whether AirPort status changed
+    # Check whether Wi-Fi status changed
     # If so it was done manually by user
     if [ "$prev_air_status" != "$air_status" ]; then
-    set_airport $air_status
+        set_airport $air_status
 
         # if [ "$air_status" = "On" ]; then
         #     notify "Wi-Fi manually turned on."

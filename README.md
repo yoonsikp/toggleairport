@@ -13,4 +13,4 @@ to uninstall just do
 ./uninstall.sh
 ```
 
-do not run either of the script with sudo, if you do, notifications will not be displayed.
+do not run either of the scripts with sudo, if you do, notifications will not display.

@@ -5,10 +5,12 @@ Assuming you have git all ready configured for GitHub, then simply do the follow
 ```bash
 git clone https://github.com/paulbhart/toggleairport.git
 cd toggleairport
-sudo ./install.sh
+./install.sh
 ```
 
 to uninstall just do
 ```bash
-sudo ./uninstall.sh
+./uninstall.sh
 ```
+
+do not run either of the script with sudo, if you do, notifications will not be displayed.

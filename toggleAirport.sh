@@ -31,15 +31,8 @@ function set_airport {
 
 }
 
-function growl {
-
-    # Checks whether Growl is installed
-    if [ -f "/usr/local/bin/growlnotify" ]; then
-        /usr/local/bin/growlnotify -m "$1" -a "AirPort Utility.app"
-    else
-        osascript -e "display notification \"$1\" with title \"Wifi Toggle\" sound name \"Hero\""
-    fi
-
+function notify {
+    osascript -e "display notification \"$1\" with title \"Wi-Fi Toggle\""
 }
 
 # Set default values
@@ -85,10 +78,10 @@ if [ "$prev_eth_status" != "$eth_status" ]; then
 
     if [ "$eth_status" = "On" ]; then
         set_airport "Off"
-        growl "Wired network detected. Turning AirPort off."
+        notify "Wired network detected. Turning Wi-Fi off."
     else
         set_airport "On"
-        growl "No wired network detected. Turning AirPort on."
+        notify "No wired network detected. Turning Wi-Fi on."
     fi
 
 # If ethernet did not change
@@ -99,11 +92,11 @@ else
     if [ "$prev_air_status" != "$air_status" ]; then
     set_airport $air_status
 
-    if [ "$air_status" = "On" ]; then
-        growl "AirPort manually turned on."
-    else
-        growl "AirPort manually turned off."
-    fi
+        # if [ "$air_status" = "On" ]; then
+        #     notify "Wi-Fi manually turned on."
+        # else
+        #     notify "Wi-Fi manually turned off."
+        # fi
 
     fi
 

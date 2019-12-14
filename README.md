@@ -1,7 +1,8 @@
 All the credit for the code belongs to others including https://gist.github.com/albertbori/1798d88a93175b9da00b
 
+This program turns off WiFi when it detects a wired ethernet connection and turns on WiFi when the ethernet is unplugged.
 
-## For Catalina ##
+## For Catalina and later ##
 Tested on Catalina
 
 ```bash
@@ -15,9 +16,11 @@ to uninstall just do
 ./uninstall.sh
 ```
 
-## For Non-Catalina ##
+## For pre Catalina ##
+(or if the Catalina version didn't work for you)
+
 ```bash
-git clone --branch non-catalina https://github.com/CoolCyberBrain/toggleairport.git
+git clone --branch pre_catalina https://github.com/CoolCyberBrain/toggleairport.git
 cd toggleairport
 ./install.sh
 ```

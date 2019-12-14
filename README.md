@@ -17,7 +17,7 @@ to uninstall just do
 
 ## For Non-Catalina ##
 ```bash
-git clone -branch non-catalina https://github.com/CoolCyberBrain/toggleairport.git
+git clone --branch non-catalina https://github.com/CoolCyberBrain/toggleairport.git
 cd toggleairport
 ./install.sh
 ```

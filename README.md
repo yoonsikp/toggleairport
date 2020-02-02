@@ -1,4 +1,4 @@
-All the credit for the code belongs to others including https://gist.github.com/albertbori/1798d88a93175b9da00b
+The credit for most of the code belongs to others including https://gist.github.com/albertbori/1798d88a93175b9da00b
 
 This program turns off WiFi when it detects a wired ethernet connection and turns on WiFi when the ethernet is unplugged.
 

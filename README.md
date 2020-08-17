@@ -6,7 +6,7 @@ This program turns off WiFi when it detects a wired ethernet connection and turn
 Tested on Catalina
 
 ```bash
-git clone https://github.com/CoolCyberBrain/toggleairport.git
+git clone https://github.com/Calvin-LL/toggleairport.git
 cd toggleairport
 ./install.sh
 ```
@@ -20,7 +20,7 @@ to uninstall just do
 (or if the Catalina version didn't work for you)
 
 ```bash
-git clone --branch pre_catalina https://github.com/CoolCyberBrain/toggleairport.git
+git clone --branch pre_catalina https://github.com/Calvin-LL/toggleairport.git
 cd toggleairport
 ./install.sh
 ```
